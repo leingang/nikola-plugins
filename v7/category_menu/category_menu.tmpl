@@ -1,0 +1,14 @@
+<%def name="html_category_menu()">
+    %if CATEGORY_MENU:
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+        %for suburl, count, text in CATEGORY_MENU:
+            % if rel_link(permalink, suburl) == "#":
+                <li class="active"><a href="${permalink}">${text.capitalize()} (${count})<span class="sr-only">${messages("(active)", lang)}</span></a>
+            %else:
+                <li><a href="${suburl}">${text.capitalize()} (${count})</a>
+            %endif
+        %endfor
+        </ul>
+    %endif
+</%def>

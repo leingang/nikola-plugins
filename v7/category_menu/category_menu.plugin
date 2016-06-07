@@ -1,0 +1,12 @@
+[Core]
+name = category_menu
+module = category_menu
+
+[Documentation]
+author = Matthew Leingang
+version = 0.1
+website = https://matthewleingang.com/
+description = Render a category menu
+
+[Nikola]
+plugincategory = Config
